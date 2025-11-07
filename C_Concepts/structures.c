@@ -39,7 +39,7 @@ printf("CGPA:%.2f\n", s3.cgpa);
 return 0;
 }
 
-structure Array
+// structure Array
 
 int main(){
 
@@ -49,7 +49,6 @@ int main(){
 
 struct student s1 = {"Amit", 1413, 8.9};
 CSE[0] = s1;
-
 printf("Student Info:\n");
 printf("Name:%s\n", CSE[0].name);
 printf("Roll:%d\n", CSE[0].roll);
@@ -79,8 +78,23 @@ printf("CGPA:%.2f\n", ptr->cgpa);
 return 0;
 }
 
-//function declaration 
-void printInfo(struct student s1);
+//other input method
+for(int i = 0; i < 3; i++) {
+ printf("Enter roll, name, marks: ");
+ scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
+}
 
-//passing to function;
+//output method
+for(int i = 0; i < 3; i++) {
+ printf("\nRoll: %d | Name: %s | Marks: %.2f",
+ students[i].roll, students[i].name, students[i].marks);
+}
+
+
+//passing to function by value; 
+void printInfo(struct student s1);
 printInfo(s1);
+
+//passing to function by reference; 
+void printInfoRef(struct student *s1);
+printInfoRef(&s1);
