@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+// 1. Permutations of a String 
+=======
 
 // 1. Permutations of a String
+>>>>>>> 592388d (Adedd new Concepts)
 //swap, length, permute!
 #include <stdio.h>
 
@@ -12,7 +16,11 @@ void swap(char *x, char *y){
 
 int length(char *str){
     int i= 0;
+<<<<<<< HEAD
+    while (str[i] != '\0'){
+=======
     while (str[i] != '\0'){ // CAN ALSO USE <string.h> : strlen()
+>>>>>>> 592388d (Adedd new Concepts)
         i++;
     }
     return i;
